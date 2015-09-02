@@ -32,7 +32,7 @@ int ellipseSize13 = 10;
 public void setup()
 {
 
-	size(500,500);
+	
 	background(100, 50, 100);
 	
 }
@@ -46,13 +46,13 @@ public void draw()
  
 public void point(){
 	//randomly generated ellipsesfollow the oposite of your mouse
-	fill(random(0,255), random(0,255), random(0,255));
+	fill((int)(Math.random() * 255 ), (int)(Math.random() * 255 ), (int)(Math.random() * 255 ));
 	ellipse(mouseY,mouseX,random(0,100), random(0,100));
 }
 public void something(){
 	if(keyPressed == true && key == 'a'){
 		fill(50);
-		stroke(random(0,255), random(0,255), random(0,255));
+		stroke((int)(Math.random() * 255 ), (int)(Math.random() * 255 ), (int)(Math.random() * 255 ));
 		ellipse(250,250,ellipseSize1 += 1, ellipseSize1 += 1); 
 	//draws an expanding ellipse; 
 	//once one ellipse diameter reaches 250, the next one starts
@@ -84,6 +84,7 @@ public void something(){
 	
 }
 
+  public void settings() { 	size(500,500); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "OriginalDesign" };
     if (passedArgs != null) {
